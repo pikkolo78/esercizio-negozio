@@ -8,8 +8,12 @@ public class Alimentari extends Prodotti {
         
         
     }
-    public void ApplicaSconto(){
+    public void ApplicaSconto(Data oggi){
         
+        if (oggi.getDifference(datascadenza)<10) {
+          double sconto= prezzo*20/100;
+          prezzo=prezzo-sconto;  
+        }
     }
             
 }
